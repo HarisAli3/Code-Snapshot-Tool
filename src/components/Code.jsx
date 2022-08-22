@@ -1,28 +1,20 @@
-import { useState } from 'react';
-import Editor from 'react-simple-code-editor';
-import { highlight, languages } from 'prismjs/components/prism-core';
-import 'prismjs/components/prism-clike';
-import 'prismjs/components/prism-javascript';
-import 'prismjs/themes/prism-funky.css';
+import { useRef, useEffect } from 'react';
+import Prism from "prismjs";
 
-const Code = () => {
-    const [code, setCode] = useState(
-        `function add(a, b) {\n  return a + b;\n}`
-    );
+
+const Code = ({code, setCode}) => {
+
+    useEffect(() => {
+        Prism.highlightAll();
+    } , [code]);
 
     return (
         <div className="code-input">
-            <Editor
-                value={code}
-                onValueChange={code => setCode(code)}
-                highlight={code => highlight(code, languages.js)}
-                tabSize={2}
-                padding={10}
-                style={{
-                    fontFamily: '"Fira code", "Fira Mono", monospace',
-                    fontSize: 14,
-                }}
-            />
+            <pre>
+                <code className="language-js">
+                    {code}
+                </code>
+            </pre>
         </div>
     )
 }

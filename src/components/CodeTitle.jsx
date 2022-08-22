@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 const CodeTitle = () => {
-  const [title, setTitle] = useState('Title')
+  const [title, setTitle] = useState('My Sum Function 🤓')
   const [showInput, setShowInput] = useState(false)
 
   return (
