@@ -89,6 +89,11 @@ main {
   min-width: 400px;
 }
 
+.downloading-code textarea {
+  display: none!important;
+  opacity: 0!important;
+}
+
 .code {
   background-color: var(--color-3);
   height: auto;
