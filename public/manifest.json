@@ -1,6 +1,6 @@
 {
-  "short_name": "Code snippet",
-  "name": "Take a code snippet and share it",
+  "short_name": "SnapCode",
+  "name": "Take a snapshot of your code",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,5 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#e73c7e"
 }
